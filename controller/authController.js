@@ -4,22 +4,22 @@ const User = require("../model/userModel");
 
 const signUp = async (req, res) => {
   try {
-    const requiredFields = [
-      "userName",
-      "pincode",
-      "address",
-      "mobileNo",
-      "email",
-      "password",
-    ];
+    // const requiredFields = [
+    //   "userName",
+    //   "pincode",
+    //   "address",
+    //   "mobileNo",
+    //   "email",
+    //   "password",
+    // ];
 
-    const missingFields = requiredFields.filter((field) => !req.body[field]);
-    if (missingFields.length > 0) {
-      return res.status(400).json({
-        error: "Missing required fields",
-        missingFields,
-      });
-    }
+    // const missingFields = requiredFields.filter((field) => !req.body[field]);
+    // if (missingFields.length > 0) {
+    //   return res.status(400).json({
+    //     error: "Missing required fields",
+    //     missingFields,
+    //   });
+    // }
 
     const { userName, pincode, address, mobileNo, email, password } = req.body;
 
